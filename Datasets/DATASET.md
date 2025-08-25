@@ -21,3 +21,28 @@ Example:
     "output": "Subject: Tuesday Meeting\n\nHi team, ..."
   }
 ]
+
+```
+| Dataset                                                                                 | Size     | Notes                                     |
+| --------------------------------------------------------------------------------------- | -------- | ----------------------------------------- |
+| [Databricks Dolly 15k](https://huggingface.co/datasets/databricks/databricks-dolly-15k) | 15k      | Small, human-written, great for beginners |
+| [Stanford Alpaca](https://huggingface.co/datasets/tatsu-lab/alpaca)                     | 52k      | Classic dataset, GPT-3 generated          |
+| [OpenOrca](https://huggingface.co/datasets/Open-Orca/OpenOrca)                          | Millions | High quality, GPT-4 style                 |
+| [OASST1](https://huggingface.co/datasets/OpenAssistant/oasst1)                          | 600k+    | OpenAssistant, dialogue style             |
+| [CodeAlpaca](https://huggingface.co/datasets/sahil2801/CodeAlpaca-20k)                  | 20k      | Programming / code-focused                |
+
+# Installing Datasets
+
+```bash
+pip install datasets
+```
+
+from datasets import load_dataset
+
+# Load Dolly 15k
+ds = load_dataset("databricks/databricks-dolly-15k")
+
+# Save to ./data/ for training
+ds["train"].to_json("data/dolly15k.json", orient="records", lines=False)
+
+print(ds["train"][0])
