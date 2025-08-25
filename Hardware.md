@@ -90,7 +90,7 @@ This guide helps you pick **practical hardware** for training/fine‑tuning and 
 
 ### eGPU?
 - **Not supported** on Apple Silicon. Don’t plan on external GPUs for M‑series Macs.
-- **supported** on Windows machines with OCulink or Thunderbolt 3/4 (USB-C).
+- **Supported** on Windows machines with OCulink or Thunderbolt 3/4 (USB-C).
 
 ### Example macOS Picks
 
