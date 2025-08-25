@@ -64,3 +64,34 @@ This guide helps you pick **practical hardware** for training/fine‑tuning and 
 ### Example Builds
 
 **Balanced 7–8B Trainer**
+
+
+### Windows + WSL2 Notes
+- Install **WSL2 (Ubuntu 22.04)** for best Python/CLI ecosystem compatibility.  
+- NVIDIA drivers on Windows automatically expose the GPU to WSL2.  
+- Use **Conda envs** per project; pin **CUDA‑enabled PyTorch**.  
+- For llama.cpp builds: use **CMake + AVX2**; for GPU, compile with **CUDA**.
+
+---
+
+## macOS: Detailed Recommendations
+
+### Chips & Memory
+- **M2/M3 Base (8–24GB)** → great **inference** with Ollama/LM Studio (Metal), light QLoRA on tiny models  
+- **M3 Pro (36–48GB)** → viable for 7B inference with larger ctx, small QLoRA runs  
+- **M3 Max (48–128GB)** → best mac choice; 7–8B comfortable, 13B possible with compromises
+
+> macOS uses **Unified Memory**, shared by CPU/GPU/Neural Engine. More unified memory = larger models / context windows.
+
+### Tools (mac‑native)
+- **Ollama** and **LM Studio** use **Metal** (no CUDA required).  
+- **llama.cpp** compiled with **Metal** backend for best performance.  
+- **Apple MLX** (Python) is emerging for Apple‑optimized training/inference.
+
+### eGPU?
+- **Not supported** on Apple Silicon. Don’t plan on external GPUs for M‑series Macs.
+
+### Example macOS Picks
+
+**Portable Dev / Inference**
+
