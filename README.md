@@ -8,7 +8,6 @@
 - Fine-tune a base model on your own instructions.
 - Merge + quantize it into a `.gguf` file.
 - Run it in **LM Studio** (GUI) and **Ollama** (CLI).
-- Share results in this repo.
 
 ---
 
@@ -18,7 +17,6 @@
 - **Conda (Miniconda or Anaconda)**
 - **LM Studio** (for local inference)
 - **Ollama** (for CLI inference)
-- Optional: **Jenkins (CI/CD)** to automate dataset checks & training
 
 ---
 
@@ -27,4 +25,3 @@
 2. Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html).
 3. Install PyTorch (CUDA 12.1 for NVIDIA GPUs):
    ```bash
-   pip install torch --index-url https://download.pytorch.org/whl/cu121
