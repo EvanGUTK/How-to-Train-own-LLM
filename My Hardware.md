@@ -26,30 +26,8 @@ This document describes my current local machine configuration used for training
 
 ### Fine-tuning (QLoRA)
 - ✅ **7B and 8B LoRA fine-tunes** are well supported.  
-- ⚠️ **32GB system RAM** is a bottleneck for very large datasets → consider upgrading to 64GB for smoother runs.  
+- ⚠️ **32GB system RAM** is a bottleneck for very large datasets.  
 - ⚠️ For 8B + long contexts (4k), gradient accumulation is required to fit training into VRAM.  
 - ❌ **70B models** not feasible on this setup without cloud or multi-GPU.  
 
 ---
-
-## 🛠️ Strengths
-- **High-end CPU (i9-13900K):** excellent preprocessing & tokenization speed.  
-- **Powerful GPU (RTX 4080 SUPER 16GB):** ideal for local fine-tunes (7B–8B).  
-- **Motherboard (Z690-E):** stable platform with PCIe Gen5 and strong VRM cooling.  
-- **Storage (~30TB):** ample space for datasets, checkpoints, and multiple models.  
-- **Cooling (360mm AIO):** keeps CPU stable during long fine-tuning runs.  
-- **PSU (1000W):** headroom for overclocking, GPU spikes, or future multi-GPU setups.  
-
----
-
-## 🔧 Possible Upgrades
-- **Memory:** Increase from 32GB → 64GB DDR5 for handling larger datasets without swap.  
-- **GPU:** Move to RTX 4090 (24GB) for smoother 13B training/inference.  
-- **Storage layout:** Use 2–4TB NVMe Gen4 SSD dedicated to models/checkpoints; keep HDD for long-term archive.  
-
----
-
-## 📊 Summary
-This machine is **excellent for experimenting with 7B–8B models**, both inference and QLoRA fine-tuning.  
-It has strong compute (i9-13900K + 4080 SUPER) and huge storage, but upgrading system memory would make it even more capable for large-dataset training.  
-
