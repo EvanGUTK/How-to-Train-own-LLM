@@ -10,11 +10,11 @@ This guide helps you pick **practical hardware** for training/fine‑tuning and 
   - **Windows:** RTX 4060 (8–16GB VRAM), 32GB RAM, 1TB NVMe  
   - **macOS:** MacBook Air/Pro **M2/M3 (16–24GB unified)** for inference; **M3 Pro/Max (36–64GB)** for small QLoRA
 
-- **Serious hobbyist (7B–8B QLoRA, comfy inference)**  
+- **Serious (7B–8B QLoRA, comfy inference)**  
   - **Windows:** **RTX 4070 Ti SUPER 16GB** or **RTX 4080 SUPER 16GB**, 64GB RAM, 2TB+ NVMe  
   - **macOS:** **M3 Max 48–64GB** unified for smooth 7B/8B and 4‑bit QLoRA
 
-- **Power user (13B+ QLoRA, faster epochs, multi‑model work)**  
+- **Power (13B+ QLoRA, faster epochs, multi‑model work)**  
   - **Windows:** **RTX 4090 24GB**, 128GB RAM, 4TB+ NVMe (Gen4)  
   - **macOS:** **M3 Max 64–128GB** unified; still slower than a 4090 for training, great for dev & inference
 
@@ -90,6 +90,7 @@ This guide helps you pick **practical hardware** for training/fine‑tuning and 
 
 ### eGPU?
 - **Not supported** on Apple Silicon. Don’t plan on external GPUs for M‑series Macs.
+- **supported** on Windows machines with OCulink or Thunderbolt 3/4 (USB-C).
 
 ### Example macOS Picks
 
