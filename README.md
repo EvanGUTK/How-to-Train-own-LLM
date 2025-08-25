@@ -26,3 +26,4 @@
 3. Install PyTorch (CUDA 12.1 for NVIDIA GPUs):
    ```bash
    pip install torch --index-url https://download.pytorch.org/whl/cu121
+   pip install llamafactory bitsandbytes transformers accelerate datasets peft
