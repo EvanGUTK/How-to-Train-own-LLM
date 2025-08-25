@@ -25,4 +25,6 @@
 2. Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html).
 3. Install PyTorch (CUDA 12.1 for NVIDIA GPUs):
    ```bash
-pip install torch --index-url https://download.pytorch.org/whl/cu121
+   pip install torch --index-url https://download.pytorch.org/whl/cu121
+
+- Above for CUDA support
