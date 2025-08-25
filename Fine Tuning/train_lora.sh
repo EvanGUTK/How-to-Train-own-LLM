@@ -1,0 +1,19 @@
+python -m llamafactory.cli.train \
+  --stage sft \
+  --model_name_or_path meta-llama/Meta-Llama-3.1-8B-Instruct \
+  --dataset_dir ./data \
+  --dataset my_first_set.json \
+  --template llama3 \
+  --finetuning_type lora \
+  --lora_target q_proj,v_proj,k_proj,o_proj,gate_proj,up_proj,down_proj \
+  --output_dir ./runs/llama31-8b-instruct-lora \
+  --overwrite_output_dir \
+  --cutoff_len 4096 \
+  --learning_rate 1e-4 \
+  --num_train_epochs 1 \
+  --per_device_train_batch_size 1 \
+  --gradient_accumulation_steps 8 \
+  --bf16 True \
+  --logging_steps 10 \
+  --save_steps 200 \
+  --quantization_bit 4
