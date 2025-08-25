@@ -36,13 +36,3 @@ Example:
 ```bash
 pip install datasets
 ```
-
-from datasets import load_dataset
-
-# Load Dolly 15k
-ds = load_dataset("databricks/databricks-dolly-15k")
-
-# Save to ./data/ for training
-ds["train"].to_json("data/dolly15k.json", orient="records", lines=False)
-
-print(ds["train"][0])
