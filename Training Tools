@@ -1,2 +1,0 @@
-  ```bash
-  pip install llamafactory bitsandbytes transformers accelerate datasets peft
