@@ -61,3 +61,17 @@ Mid GPU (12–16GB VRAM like RTX 4080): Mistral-7B-Instruct
  or Llama-3.1-8B
 
 High-end (48GB+ VRAM or multi-GPU): Llama-3.1-70B
+
+## Converting Models to GGUF (for LM Studio & Ollama)
+```bash
+git clone https://github.com/ggerganov/llama.cpp
+cd llama.cpp && make -j
+```
+
+## Convert and quantize
+```bash
+    python convert_hf_to_gguf.py \
+  --outtype q4_k_m \
+  --outfile ./runs/mistral-7b-instruct.gguf \
+  mistralai/Mistral-7B-Instruct-v0.3
+```
