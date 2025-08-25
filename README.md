@@ -1,8 +1,7 @@
 # How to Train Your Own LLM
 
-This guide walks you through **fine-tuning your own Large Language Model (LLM)** at home using **QLoRA**.  
-You’ll start with an open-source base model (e.g. Llama-3.1-8B-Instruct), fine-tune it on your dataset, and export a quantized version that runs locally in **LM Studio** and **Ollama**.
-
+This guide walks you through **fine-tuning your own Large Language Model (LLM)** using **QLoRA**.  
+You’ll start with an open-source base model, fine-tune it on your dataset, and export a quantized version that runs locally.
 ---
 
 ## 🚀 What You’ll Build
